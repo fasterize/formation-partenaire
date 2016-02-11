@@ -20,6 +20,8 @@
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -51,7 +53,9 @@
 
 					<section>
 						<h3>Fonctionnement général</h3>
-						<img src="assets/FasterizeplusCDN.png" class="plain"/>
+            <div style="background-color: white">
+						  <img src="assets/cdn-schema.png" class="plain"/>
+            </div>
 					</section>
 
           <section>
@@ -67,24 +71,27 @@
           <section>
             <h3>Noms de domaine</h3>
             <p class="fragment" data-fragment-index="5">(automatiquement créés)</p>
-						<ul id="domainName">
-              <li class="fragment" data-fragment-index="1">fasterized.com
+						<ul>
+              <li class="fragment" data-fragment-index="1"><p>fasterized.com</p>
                 <ul>
                   <li>par défaut pointe sur la plateforme (mode démo)</li>
                   <li>si une config existe, pointe sur la plateforme ou sur l'origine</li>
                 </ul>
               </li>
-              <li class="fragment" data-fragment-index="2">fasterized.net
+              <li class="fragment" data-fragment-index="2">
+                <p>fasterized.net</p>
                 <ul>
                   <li>pointe toujours sur la plateforme</li>
                 </ul>
               </li>
-							<li class="fragment" data-fragment-index="3">fasterize.it
+							<li class="fragment" data-fragment-index="3">
+                <p>fasterize.it</p>
                 <ul>
                   <li>pointe sur les serveurs d'origine</li>
                 </ul>
               </li>
-							<li class="fragment" data-fragment-index="4">s0.frz.io / s1.frz.io
+							<li class="fragment" data-fragment-index="4">
+                <p>s0.frz.io / s1.frz.io</p>
                 <ul>
                   <li>domaines "shardés", utilisés pour les objets statiques</li>
                   <li>pointent sur la plateforme ou un CDN</li>
@@ -103,7 +110,7 @@
 
           <section data-transition="linear">
 						<h3>Moins de requêtes</h3>
-						<ul>
+						<ul class="padding-short">
 							<li><a href="http://browserdiet.com/fr/#combine-css" target="_blank">Concaténation des fichiers CSS</a></li>
 							<li><a href="http://browserdiet.com/fr/#combine-js" target="_blank">Concaténation des fichiers JS</a></li>
 							<li><a href="http://browserdiet.com/fr/#data-uri" target="_blank">Inlining des petites images</a></li>
@@ -114,7 +121,7 @@
 
           <section data-transition="linear">
 						<h3>Des requêtes et réponses moins lourdes</h3>
-						<ul class="rule">
+						<ul class="rule padding-short">
 							<li><a href="http://browserdiet.com/fr/#minify-css" target="_blank">Minification des fichiers CSS</a></li>
 							<li><a href="http://browserdiet.com/fr/#minify-js" target="_blank">Minification des fichiers JS</a></li>
 							<li><a href="http://browserdiet.com/fr/#compress" target="_blank">Minification des fichiers HTML</a></li>
@@ -126,13 +133,22 @@
 
           <section data-transition="linear">
 						<h3>Des objets chargés différemment</h3>
-						<ul>
+						<ul class="padding-short">
 							<li><a href="http://browserdiet.com/fr/#css-on-top-js-on-bottom" target="_blank">Déplacement des CSS en haut de page</a></li>
 							<li><a href="http://browserdiet.com/fr/#3rd-party-async" target="_blank">Chargement différé des fichiers JavaScript</a></li>
 							<li><a href="http://www.patrickmeenan.com/progressive/view.php?img=http://farm2.staticflickr.com/1434/1002257937_021cb46a33_o.jpg" target="_blank">Progressive JPEG</li>
 							<li><a href="http://www.prelude.me/index.php/2011/05/11/web-performance-cache-domain-sharding-et-cdn/" target="_blank">Parallélisation sur plusieurs domaines (sharding)</a></li>
 						</ul>
 					</section>
+
+          <section>
+            <h3>Gestion de cache avancée</h3>
+            <ul class="padding-medium">
+              <li>Url versioning</li>
+              <li>Mise en cache de page dynamique (smart-cache)</li>
+              <li>Servir une version de la page en cache pour les utilisateurs anonymes</li>
+            </ul>
+          </section>
 
 				</section>
 
@@ -143,8 +159,8 @@
 					</section>
 
           <section data-transition="none">
-            <h3>Dashboard du compte<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/accounts/27/dashboard"> <i class="fa fa-external-link"></i></a></h3>
-            <ul >
+            <h3>Dashboard du compte<a title="Link" class="dashboard" target="_blank" href="https://www.fasterize.com/fr/accounts/27/dashboard"> <i class="fa fa-external-link"></i></a></h3>
+            <ul class="padding-medium">
               <li>Liste des configurations du compte</li>
               <li>État du branchement des configurations</li>
               <li>État des optimisations des configurations</li>
@@ -155,33 +171,27 @@
 					</section>
 
 					<section data-transition="none">
-            <h3>Dashboard du compte<a title="Link" class="dashboard" target="_blank" data-href="http://www.fasterize.com/fr/accounts/27/dashboard"> <i class="fa fa-external-link"></i></a></h3>
+            <h3>Dashboard du compte<a title="Link" class="dashboard" target="_blank" href="https://www.fasterize.com/fr/accounts/27/dashboard"> <i class="fa fa-external-link"></i></a></h3>
             <img src="assets/account_dashboard.png" >
 					</section>
 
           <section>
 						<h3>Configuration</h3>
-            <div style="text-align: left; ">
-              <p>Permet de configurer</p>
-              <ul>
-							  <li>Règles</li>
-							  <li>Domaines</li>
-							  <li>Cache</li>
-							  <li>Exclusions</li>
-							  <li>Redirections</li>
-						  </ul>
-              <p></p>
-              <p>En mode avancé</p>
-              <ul>
-							  <li>Tracking de performance Fasterize &amp; widgets</li>
-							  <li>A/B Test</li>
-              </ul>
-            </div>
+            <ul>
+						  <li>Règles</li>
+						  <li>Domaines</li>
+						  <li>Cache</li>
+              <li>Tag Manager</li>
+						  <li>Exclusions</li>
+						  <li>Redirections</li>
+              <li>A/B Test</li>
+              <li>Page de débordement</li>
+					  </ul>
 					</section>
 
 					<section data-transition="linear">
-						<h3>Configuration : règles <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/29/rules"> <i class="fa fa-external-link"></i></a></h3>
-						<ul>
+						<h3>Configuration : règles <a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/rules"> <i class="fa fa-external-link"></i></a></h3>
+						<ul class="padding-medium">
 							<li>Activation/désactivation des règles</li>
               <li>Options possibles : icône <i class="fa fa-wrench"></i></li>
               <li>Exclusion d'URL pour une règle : icone <i class="fa fa-th-list"></i></li>
@@ -190,7 +200,7 @@
 					</section>
 
           <section data-transition="linear">
-						<h3>Configuration : domaines <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/29/hosts_mapping"> <i class="fa fa-external-link"></i></a></h3>
+						<h3>Configuration : domaines <a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/hosts_mapping"> <i class="fa fa-external-link"></i></a></h3>
 						<ul>
 							<li>Configuration de l'origine</li>
 							<li>Ajout de domaines secondaires (objets statiques)</li>
@@ -199,30 +209,32 @@
 					</section>
 
           <section data-transition="linear">
-						<h3>Configuration : cache<a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/29/caching"> <i class="fa fa-external-link"></i></a></h3>
+						<h3>Configuration : cache<a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/caching"> <i class="fa fa-external-link"></i></a></h3>
 						<p>Redéfinition des règles de mise en cache pour une URL</p>
 						<img src="assets/caching.png" />
 					</section>
 
           <section data-transition="linear">
-						<h3>Configuration : exceptions <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/29/exclusions"> <i class="fa fa-external-link"></i></a></h3>
-            <ul>
+            <h3>Configuration : Tag manager<a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/scripts"> <i class="fa fa-external-link"></i></a></h3>
+            <p>Ajout de tags webperf dans la page</p>
+            <img src="assets/tagmanager.png" />
+          </section>
 
-            <li>Permet de ne pas optimiser une ou plusieurs URL.</li>
-            <li>Exemples :</li>
+          <section data-transition="linear">
+						<h3>Configuration : exceptions <a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/exclusions"> <i class="fa fa-external-link"></i></a></h3>
             <ul>
-              <li>backoffice</li>
-              <li>tracking</li>
+              <li>Permet de ne pas optimiser une ou plusieurs URL.</li>
+              <li>Exemples : backoffice, tracking</li>
+              <li>Permet de configurer des URL à ne pas modifier dans une page HTML.</li>
             </ul>
-            <li>Permet de configurer des URL à ne pas modifier dans une page HTML.</li>
 						<img src="assets/exclusion.png" />
 					</section>
 
           <section data-transition="linear">
-						<h3>Configuration : Redirections <a title="Link" class="dashboard"  target="_blank" data-href="http://www.fasterize.com/fr/website_configs/29/redirections"> <i class="fa fa-external-link"></i></a></h3>
+						<h3>Configuration : Redirections <a title="Link" class="dashboard"  target="_blank" href="https://www.fasterize.com/fr/website_configs/29/redirections"> <i class="fa fa-external-link"></i></a></h3>
             <ul>
-
-            <li>Redirections des mobiles et/ou tablettes vers un autre site.</li>
+              <li>Redirections des mobiles et/ou tablettes vers un autre site.</li>
+            </ul>
 						<img src="assets/redirection.png" />
 					</section>
 
@@ -236,7 +248,7 @@
 
 					<section data-transition="linear">
 						<h3>Ajouter une configuration</h3>
-            <a title="Link" target="_blank" class="dashboard" data-href="http://www.fasterize.com/fr/accounts/27/website_configs/new"><img src="assets/addasite1.png"></a>
+            <a title="Link" target="_blank" class="dashboard" href="https://www.fasterize.com/fr/accounts/27/website_configs/new"><img src="assets/addasite1.png"></a>
             <img src="assets/addasite2.png">
 					</section>
 
@@ -343,6 +355,51 @@
               <li>Si le site est "statique", il est possible de mettre en cache les pages en ajoutant <code>.*</code> dans les règles de caching</li>
 						</ul>
 					</section>
+          <section>
+            <h3>Connaitre le status de la réponse</h3>
+            <p>Un header <code>x-fstrz</code> est ajouté dans chaque réponse traitée par Fasterize<p>
+            <ul>
+              <li>o : optimisée</li>
+              <li>dc,o : optimisée, cache dynamique (fonctionnement interne du moteur)</li>
+              <li>sc : la page est cachée via le SmartCache (Cache + Ajax)</li>
+              <li>clc : la page est cachée via le Cookie Less Cache</li>
+              <li>w,p : optimisation en cours</li>
+              <li>t : timeout, l’optimisation a pris trop de temps, la page renvoyée n’est pas optimisée</li>
+              <li>e : error, l’optimisation a échoué, la page renvoyée n’est pas optimisée</li>
+            <ul>
+          </section>
+
+          <section>
+            <h3>Obtenir les adresses IP</h3>
+            <ul>
+              <li>Utilisé pour l'analyse et la détection de fraudes</li>
+              <li>Chaque requête allant vers l'origine va voir l'adresse IP de Fasterize</li>
+              <li>Fasterize mets l'adresse IP dans les headers HTTP <code>X-Forwarded-For</code>/<code>True-Client-IP</code></li>
+              <li>Vous devez mettre à jour votre outils pour utiliser ces headers</li>
+              <li>Details : <a title="Link" class="dashboard"  target="_blank" data-href="http://support.fasterize.com/en/article/how-do-i-know-the-client-ip-address-for-my-users-requests/"> <i class="fa fa-external-link"></i></a>
+            </ul>
+          </section>
+          <section>
+            <h3>Si la plateforme Fasterize est down</h3>
+            <p>.fasterized.com domain est géré par Cedexis et est dynamique.</p>
+            <ul>
+              <li>Les requêtes sont automatiquement redirigées vers le serveur d'origine</li>
+              <li>http://status.fasterize.com/ donne le status de la plateforme</li>
+            </ul>
+            <img src="assets/statuspage.png">
+          </section>
+          </section>
+          <section>
+            <h3>And if you can't manage ...</h3>
+
+            <p>Contact support at support@fasterize.com!</p>
+
+            <ul>
+              <li>Inform of a global redesign</li>
+              <li>Inform of a SSL certificate expiration</li>
+              <li>Inform of a server migration</li>
+            </ul>
+          </section>
 
 				</section>
 
@@ -350,10 +407,7 @@
 
 			<div class="icon-bar">
 				<p>
-					<a class="image" href="http://www.fasterize.com" style="font-size:28px; font-family: AvenirNext-Medium,Arial,sans-serif; color: #FFF;"><img src="assets/fasterize_logo_mini_blanc.svg" class="plain"/><span class="logo_title">fasterize</span></a>
-					<a class="image" href="https://twitter.com/fasterize"><img class="plain" src="assets/tweet-me.svg" height="35"><span>twitter</span></a>
-          <a class="image" href="mailto:info@fasterize.com"><img class="plain" src="assets/email-me.svg" height="35"><span>email</span></a>
-          <a class="image" href="http://blog.fasterize.com/"><img class="plain" src="assets/blog-me.svg" height="35"><span>blog</span></a>
+					<a class="image" href="https://www.fasterize.com" style="font-size:28px; font-family: AvenirNext-Medium,Arial,sans-serif; color: #FFF;"><img src="assets/fasterize_logo_mini_blanc.svg" class="plain"/><span class="logo_title">fasterize</span></a>
         </p>
 			</div>
 
@@ -371,9 +425,11 @@
 				progress: true,
 				history: true,
 				center: true,
+        slideNumber:true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+        minScale: 0.8,
+        maxScale: 1.3,
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -10,15 +10,15 @@
 	<feOffset  result="offsetBlur" dx="0" dy="-2"></feOffset>
 	<feComposite  in2="SourceAlpha" in="offsetBlur" operator="out"></feComposite>
 	<feOffset  dx="0" dy="2" result="darkRim"></feOffset>
-	
+
 	<feFlood  flood-color="white" flood-opacity="1" result="lightFill"></feFlood>
 	<feComposite  result="lightAlpha" in2="SourceAlpha" in="lightFill" operator="in"></feComposite>
 	<feGaussianBlur in="lightAlpha" stdDeviation="2"></feGaussianBlur>
 	<feOffset  dx="0" dy="2"></feOffset>
 	<feComposite in2="SourceAlpha" operator="out"></feComposite>
 	<feOffset  dx="0" dy="-2" result="lightRim"></feOffset>
-	
-	
+
+
 	<feMerge>
 		<feMergeNode  in="SourceGraphic"></feMergeNode>
 		<feMergeNode in="darkRim"></feMergeNode>
